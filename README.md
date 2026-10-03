@@ -21,7 +21,7 @@ mi-primera-pagina-bootstrap/
     ├── Cuaderno tapa dura.jpeg
     ├── midori.jpeg
     ├── cuaderno.jpg
-    ├── Resaltadores.jpeg
+    ├── Resaltadores 2.jpeg
     ├── Bolígrafos de tinta gel 0,5mm.jpeg
     ├── marcadores.jpeg
     ├── Cartuchera.jpeg
@@ -36,7 +36,7 @@ mi-primera-pagina-bootstrap/
 
 El sitio cuenta con una barra de navegación fija superior (`sticky-top`) que conecta las tres páginas principales del proyecto:
 - **Inicio (`index.html`)**: Presentación general, acceso a productos destacados y sección informativa.
-- **Categorías (`categorias.html`)**: Sección destinada al catálogo completo de productos clasificados por rubro.
+- **Categorías (`categorias.html`)**: Catálogo de productos clasificados por rubro; cada producto permite consultar sus detalles en un modal de Bootstrap.
 - **Contacto (`contacto.html`)**: Sección destinada a canales de atención y comunicación.
 
 ---
@@ -59,7 +59,7 @@ A continuación se detalla toda la información de los productos disponibles en 
 
 | Producto | Imagen | Categoría | Precio | Descripción | Dónde se muestra |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Resaltadores pastel** | `img/Resaltadores.jpeg` | Escritura | $6.400 | Set de 6 resaltadores en tonos pastel suaves (lila, menta, durazno, rosa, celeste y vainilla). Punta biselada para trazos finos y anchos sin manchar el reverso de la hoja. | Diapositiva 1 del carrusel de destacados (`index.html`) |
+| **Resaltadores pastel** | `img/Resaltadores 2.jpeg` | Escritura | $6.400 | Set de resaltadores en tonos amarillo, menta, rosa y durazno para destacar apuntes. | Diapositiva 1 del carrusel de destacados (`index.html`) |
 | **Bolígrafos de tinta gel 0.5mm** | `img/Bolígrafos de tinta gel 0,5mm.jpeg` | Escritura | $5.900 | Set de bolígrafos de punta fina 0.5 mm con tinta gel de flujo continuo y secado ultra rápido, diseñados para una escritura ergonómica, suave y limpia. | Diapositiva 2 del carrusel de destacados (`index.html`) |
 | **Marcadores punta pincel (Brush Pens)** | `img/marcadores.jpeg` | Escritura | $7.900 | Marcadores flexibles con punta tipo pincel para caligrafía moderna, lettering, bocetos y detalles artísticos. | Recursos del proyecto (`img/`) |
 
@@ -91,6 +91,7 @@ A continuación se detalla toda la información de los productos disponibles en 
   - Barra de navegación responsive (`navbar`, `navbar-expand-lg`, `collapse`, `nav-underline`).
   - Carrusel de productos interactivo (`carousel`, `carousel-dark`, `carousel-indicators`, `carousel-control`).
   - Tarjetas de producto (`card`, `ratio-16x9`, `badge`, `rounded-pill`).
+  - Modal reutilizable con información detallada de cada producto (`modal`, `data-bs-toggle`).
   - Botones y utilidades de color, tipografía y espaciado nativas (`bg-success-subtle`, `text-secondary`, etc.).
 - **Bootstrap Icons 1.11.3**: Iconografía vectorial para acciones, categorías y botones.
 

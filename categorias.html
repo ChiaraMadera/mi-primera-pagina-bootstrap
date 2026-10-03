@@ -3,46 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explorá nuestras categorías de papelería y útiles escolares para organizar, estudiar y crear.">
     <title>Categorías - Entre Líneas</title>
-    <!-- CSS de Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Iconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="bg-light">
+    <!-- Este enlace permite saltar directamente al contenido principal. Es una buena práctica para accesibilidad y teclado. -->
+    <a class="visually-hidden-focusable" href="#contenido-principal">Saltar al contenido principal</a>
 
-    <!-- 1. Barra de Navegación (Navbar) -->
-    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm py-2">
+    <header>
+        <!-- La navegación principal del sitio queda bien definida con el rol semántico del elemento nav. -->
+        <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm py-2" aria-label="Navegación principal">
+            <div class="container">
+                <a class="navbar-brand py-0" href="index.html" aria-label="Ir a la página de inicio">
+                    <img src="img/LOGO_ENTRE_LINEAS.png" alt="Entre Líneas - Papelería y Útiles Escolares" height="90">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContenido">
+                    <ul class="navbar-nav nav-underline mx-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark" aria-current="page" href="categorias.html">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Este bloque funciona como cabecera del contenido de la sección de categorías. -->
+    <header class="py-5 bg-white border-bottom">
+        <div class="container py-lg-3 text-center">
+            <p class="text-secondary text-uppercase small fw-semibold mb-2">Encontrá lo que necesitás</p>
+            <h1 class="display-5 fw-bold text-dark mb-3">Explorá nuestras categorías</h1>
+            <p class="lead text-secondary mb-4 mx-auto" style="max-width: 680px;">
+                Productos de papelería y útiles escolares para organizar tus ideas, estudiar y crear todos los días.
+            </p>
+            <nav aria-label="Explorar categorías" class="d-flex flex-wrap justify-content-center gap-2">
+                <a class="btn bg-success-subtle text-dark border-0 rounded-pill px-4" href="#libretas">
+                    <i class="bi bi-journal-text me-1"></i> Libretas y cuadernos
+                </a>
+                <a class="btn bg-success-subtle text-dark border-0 rounded-pill px-4" href="#escritura">
+                    <i class="bi bi-pen me-1"></i> Escritura
+                </a>
+                <a class="btn bg-success-subtle text-dark border-0 rounded-pill px-4" href="#organizacion">
+                    <i class="bi bi-grid me-1"></i> Organización
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="py-4 py-lg-5">
         <div class="container">
-            <!-- Logo / Marca -->
-            <a class="navbar-brand py-0" href="index.html">
-                <img src="img/LOGO_ENTRE_LINEAS.png" alt="Entre Líneas - Papelería y Útiles Escolares" height="90">
-            </a>
+            <!-- Cada sección representa una categoría de productos. Esto ayuda a que el contenido tenga una estructura clara para lectores de pantalla y motores de búsqueda. -->
+            <section id="libretas" class="mb-5" aria-labelledby="titulo-libretas">
+                <header class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end mb-3">
+                    <hgroup>
+                        <p class="text-secondary text-uppercase small fw-semibold mb-1">Escribí cada idea</p>
+                        <h2 id="titulo-libretas" class="fw-bold text-dark mb-0">Libretas y cuadernos</h2>
+                    </hgroup>
+                    <span class="text-muted small mt-2 mt-sm-0">3 productos</span>
+                </header>
+                <div class="row g-3 g-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <figure class="ratio ratio-16x9 mb-0">
+                                <img src="img/Cuaderno tapa dura.jpeg" class="card-img-top object-fit-cover" alt="Cuaderno amarillo de tapa dura con cierre elástico">
+                            </figure>
+                            <div class="card-body d-flex flex-column p-3">
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-1 fw-normal align-self-start mb-2">Libretas</span>
+                                <h3 class="card-title fw-bold fs-5 text-dark mb-2">Cuaderno amarillo con elástico</h3>
+                                <p class="card-text text-muted small flex-grow-1">Cuaderno de tapa dura con cierre elástico, ideal para apuntes y notas de todos los días.</p>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                        <span class="fw-bold text-dark fs-5">$10.500</span>
+                                        <button type="button" class="btn btn-dark btn-sm rounded-pill px-3" aria-label="Ver detalles del producto Cuaderno amarillo con elástico" data-bs-toggle="modal" data-bs-target="#modalProducto" data-product-title="Cuaderno amarillo con elástico" data-product-category="Libretas" data-product-price="$10.500" data-product-image="img/Cuaderno tapa dura.jpeg" data-product-description="Cuaderno de tapa dura en tono amarillo claro, con cierre elástico. Ideal para apuntes y notas de todos los días.">
+                                            <i class="bi bi-eye me-1"></i> Ver detalles
+                                        </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <figure class="ratio ratio-16x9 mb-0">
+                                <img src="img/midori.jpeg" class="card-img-top object-fit-cover" alt="Cuaderno estilo Midori con cierre elástico">
+                            </figure>
+                            <div class="card-body d-flex flex-column p-3">
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-1 fw-normal align-self-start mb-2">Libretas</span>
+                                <h3 class="card-title fw-bold fs-5 text-dark mb-2">Cuaderno estilo Midori</h3>
+                                <p class="card-text text-muted small flex-grow-1">Libreta de viaje artesanal con cubierta resistente, cierre elástico y sistema de repuestos recargables.</p>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                        <span class="fw-bold text-dark fs-5">$12.800</span>
+                                        <button type="button" class="btn btn-dark btn-sm rounded-pill px-3" aria-label="Ver detalles del producto Cuaderno estilo Midori" data-bs-toggle="modal" data-bs-target="#modalProducto" data-product-title="Cuaderno estilo Midori" data-product-category="Libretas" data-product-price="$12.800" data-product-image="img/midori.jpeg" data-product-description="Libreta de viaje artesanal con cubierta de cuero o eco-cuero resistente, cierre elástico y sistema de repuestos recargables. Diseñada para acompañar viajes y proyectos a largo plazo.">
+                                            <i class="bi bi-eye me-1"></i> Ver detalles
+                                        </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <figure class="ratio ratio-16x9 mb-0">
+                                <img src="img/cuaderno.jpg" class="card-img-top object-fit-cover" alt="Agenda bordó de tapa dura con elástico">
+                            </figure>
+                            <div class="card-body d-flex flex-column p-3">
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-1 fw-normal align-self-start mb-2">Libretas</span>
+                                <h3 class="card-title fw-bold fs-5 text-dark mb-2">Agenda bordó 2025</h3>
+                                <p class="card-text text-muted small flex-grow-1">Agenda de tapa dura con cinta elástica y señalador, para organizar tus actividades y notas.</p>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                        <span class="fw-bold text-dark fs-5">$9.500</span>
+                                        <button type="button" class="btn btn-dark btn-sm rounded-pill px-3" aria-label="Ver detalles del producto Agenda bordó 2025" data-bs-toggle="modal" data-bs-target="#modalProducto" data-product-title="Agenda bordó 2025" data-product-category="Libretas" data-product-price="$9.500" data-product-image="img/cuaderno.jpg" data-product-description="Agenda de tapa dura bordó con cinta elástica y señalador, para organizar actividades y notas.">
+                                            <i class="bi bi-eye me-1"></i> Ver detalles
+                                        </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-            <!-- Botón de menú responsive (hamburguesa) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Abrir menú de navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <section id="escritura" class="mb-5" aria-labelledby="titulo-escritura">
+                <header class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end mb-3">
+                    <hgroup>
+                        <p class="text-secondary text-uppercase small fw-semibold mb-1">Dale color a tus notas</p>
+                        <h2 id="titulo-escritura" class="fw-bold text-dark mb-0">Escritura</h2>
+                    </hgroup>
+                    <span class="text-muted small mt-2 mt-sm-0">2 productos</span>
+                </header>
+                <div class="row g-3 g-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <figure class="ratio ratio-16x9 mb-0">
+                                <img src="img/Resaltadores 2.jpeg" class="card-img-top object-fit-cover" alt="Set de resaltadores pastel">
+                            </figure>
+                            <div class="card-body d-flex flex-column p-3">
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-1 fw-normal align-self-start mb-2">Escritura</span>
+                                <h3 class="card-title fw-bold fs-5 text-dark mb-2">Resaltadores pastel</h3>
+                                <p class="card-text text-muted small flex-grow-1">Set de 6 tonos suaves con punta biselada para trazos finos y anchos, sin manchar el reverso.</p>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                        <span class="fw-bold text-dark fs-5">$6.400</span>
+                                        <button type="button" class="btn btn-dark btn-sm rounded-pill px-3" aria-label="Ver detalles del producto Resaltadores pastel" data-bs-toggle="modal" data-bs-target="#modalProducto" data-product-title="Resaltadores pastel" data-product-category="Escritura" data-product-price="$6.400" data-product-image="img/Resaltadores 2.jpeg" data-product-description="Set de resaltadores en tonos amarillo, menta, rosa y durazno para destacar tus apuntes.">
+                                            <i class="bi bi-eye me-1"></i> Ver detalles
+                                        </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <figure class="ratio ratio-16x9 mb-0">
+                                <img src="img/Boligrafos de tinta gel  2.jpeg" class="card-img-top object-fit-cover" alt="Bolígrafos de tinta gel negros, azules y rojos">
+                            </figure>
+                            <div class="card-body d-flex flex-column p-3">
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-1 fw-normal align-self-start mb-2">Escritura</span>
+                                <h3 class="card-title fw-bold fs-5 text-dark mb-2">Bolígrafos de tinta gel 0,5 mm</h3>
+                                <p class="card-text text-muted small flex-grow-1">Set de punta fina y flujo continuo, con tinta de secado rápido para una escritura suave y limpia.</p>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                        <span class="fw-bold text-dark fs-5">$5.900</span>
+                                        <button type="button" class="btn btn-dark btn-sm rounded-pill px-3" aria-label="Ver detalles del producto Bolígrafos de tinta gel 0,5 mm" data-bs-toggle="modal" data-bs-target="#modalProducto" data-product-title="Bolígrafos de tinta gel 0,5 mm" data-product-category="Escritura" data-product-price="$5.900" data-product-image="img/Boligrafos de tinta gel  2.jpeg" data-product-description="Set de bolígrafos de punta fina 0,5 mm con tinta gel en colores negro, azul y rojo.">
+                                            <i class="bi bi-eye me-1"></i> Ver detalles
+                                        </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-            <!-- Contenido colapsable -->
-            <div class="collapse navbar-collapse" id="navbarContenido">
-                <!-- Enlaces de navegación centrados -->
-                <ul class="navbar-nav nav-underline mx-auto mb-2 mb-lg-0 gap-lg-4 text-center">
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-dark" aria-current="page" href="categorias.html">Categorías</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-secondary" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
+            <section id="organizacion" class="mb-3" aria-labelledby="titulo-organizacion">
+                <header class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end mb-3">
+                    <hgroup>
+                        <p class="text-secondary text-uppercase small fw-semibold mb-1">Todo en su lugar</p>
+                        <h2 id="titulo-organizacion" class="fw-bold text-dark mb-0">Organización</h2>
+                    </hgroup>
+                    <span class="text-muted small mt-2 mt-sm-0">4 productos</span>
+                </header>
+                <div class="row g-3 g-lg-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <figure class="ratio ratio-16x9 mb-0">
+                                <img src="img/Cartuchera.jpeg" class="card-img-top object-fit-cover" alt="Cartuchera clásica de lona">
+                            </figure>
+                            <div class="card-body d-flex flex-column p-3">
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-1 fw-normal align-self-start mb-2">Organización</span>
+                                <h3 class="card-title fw-bold fs-5 text-dark mb-2">Cartuchera clásica</h3>
+                                <p class="card-text text-muted small flex-grow-1">Cartuchera compacta de lona resistente, con cierre reforzado y forro interior lavable.</p>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                        <span class="fw-bold text-dark fs-5">$8.200</span>
+                                        <button type="button" class="btn btn-dark btn-sm rounded-pill px-3" aria-label="Ver detalles del producto Cartuchera clásica" data-bs-toggle="modal" data-bs-target="#modalProducto" data-product-title="Cartuchera clásica" data-product-category="Organización" data-product-price="$8.200" data-product-image="img/Cartuchera.jpeg" data-product-description="Cartuchera compacta confeccionada en lona de alta durabilidad, con cierre metálico reforzado y forro interior lavable. Ideal para llevar los útiles esenciales del día a día.">
+                                            <i class="bi bi-eye me-1"></i> Ver detalles
+                                        </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <figure class="ratio ratio-16x9 mb-0">
+                                <img src="img/Cartuchera con bolsillos.jpeg" class="card-img-top object-fit-cover" alt="Cartuchera con múltiples bolsillos y compartimentos">
+                            </figure>
+                            <div class="card-body d-flex flex-column p-3">
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-1 fw-normal align-self-start mb-2">Organización</span>
+                                <h3 class="card-title fw-bold fs-5 text-dark mb-2">Cartuchera con bolsillos múltiples</h3>
+                                <p class="card-text text-muted small flex-grow-1">Gran capacidad, compartimentos desplegables y divisiones para reglas, tijeras y lápices.</p>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                        <span class="fw-bold text-dark fs-5">$9.800</span>
+                                        <button type="button" class="btn btn-dark btn-sm rounded-pill px-3" aria-label="Ver detalles del producto Cartuchera con bolsillos múltiples" data-bs-toggle="modal" data-bs-target="#modalProducto" data-product-title="Cartuchera con bolsillos múltiples" data-product-category="Organización" data-product-price="$9.800" data-product-image="img/Cartuchera con bolsillos.jpeg" data-product-description="Cartuchera de gran capacidad con compartimentos desplegables, solapas elásticas y divisiones especiales para reglas, tijeras y variedad de lápices.">
+                                            <i class="bi bi-eye me-1"></i> Ver detalles
+                                        </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <figure class="ratio ratio-16x9 mb-0">
+                                <img src="img/organizador de escritorio.jpeg" class="card-img-top object-fit-cover" alt="Organizador de escritorio con compartimentos">
+                            </figure>
+                            <div class="card-body d-flex flex-column p-3">
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-1 fw-normal align-self-start mb-2">Organización</span>
+                                <h3 class="card-title fw-bold fs-5 text-dark mb-2">Organizador de escritorio</h3>
+                                <p class="card-text text-muted small flex-grow-1">Compartimentos escalonados para ordenar bolígrafos, notas adhesivas, clips y accesorios.</p>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                        <span class="fw-bold text-dark fs-5">$11.200</span>
+                                        <button type="button" class="btn btn-dark btn-sm rounded-pill px-3" aria-label="Ver detalles del producto Organizador de escritorio" data-bs-toggle="modal" data-bs-target="#modalProducto" data-product-title="Organizador de escritorio" data-product-category="Organización" data-product-price="$11.200" data-product-image="img/organizador de escritorio.jpeg" data-product-description="Módulo organizador de escritorio con compartimentos escalonados para ordenar bolígrafos, notas adhesivas, clips y accesorios de trabajo o estudio.">
+                                            <i class="bi bi-eye me-1"></i> Ver detalles
+                                        </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                            <figure class="ratio ratio-16x9 mb-0">
+                                <img src="img/notas adhesivas.jpeg" class="card-img-top object-fit-cover" alt="Notas adhesivas y señaladores de colores pastel">
+                            </figure>
+                            <div class="card-body d-flex flex-column p-3">
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-1 fw-normal align-self-start mb-2">Organización</span>
+                                <h3 class="card-title fw-bold fs-5 text-dark mb-2">Notas adhesivas y señaladores</h3>
+                                <p class="card-text text-muted small flex-grow-1">Notas autoadhesivas y banderitas pastel para marcar libros, apuntes y recordatorios.</p>
+                                <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                        <span class="fw-bold text-dark fs-5">$4.200</span>
+                                        <button type="button" class="btn btn-dark btn-sm rounded-pill px-3" aria-label="Ver detalles del producto Notas adhesivas y señaladores" data-bs-toggle="modal" data-bs-target="#modalProducto" data-product-title="Notas adhesivas y señaladores" data-product-category="Organización" data-product-price="$4.200" data-product-image="img/notas adhesivas.jpeg" data-product-description="Set de notas autoadhesivas en diferentes medidas y banderitas señaladoras pastel para marcar libros, apuntes y recordatorios.">
+                                            <i class="bi bi-eye me-1"></i> Ver detalles
+                                        </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProductoTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 overflow-hidden">
+                <div class="modal-header border-0 pb-0">
+                    <span id="modalProductoCategoria" class="badge rounded-pill bg-secondary-subtle text-secondary-emphasis px-3 py-2 fw-normal">Categoría</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-4 pt-2">
+                    <div class="row align-items-center g-4">
+                        <div class="col-12 col-md-6">
+                            <div class="ratio ratio-4x3 rounded-3 overflow-hidden bg-light">
+                                <img id="modalProductoImagen" src="" alt="" class="object-fit-cover">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h2 id="modalProductoTitulo" class="fw-bold text-dark mb-3">Detalle del producto</h2>
+                            <p id="modalProductoDescripcion" class="text-secondary mb-4"></p>
+                            <p class="text-muted small text-uppercase fw-semibold mb-1">Precio</p>
+                            <p id="modalProductoPrecio" class="fw-bold fs-3 text-dark mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0 px-4 pb-4">
+                    <button type="button" class="btn btn-dark rounded-pill px-4" data-bs-dismiss="modal">Seguir explorando</button>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
+
+    <footer class="bg-white py-4 border-top mt-auto">
+        <div class="container text-center text-secondary">
+            <p class="mb-1 small fw-semibold text-uppercase">Entre Líneas &copy; 2026</p>
+            <p class="mb-0 small">Papelería y útiles escolares - Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <!-- Bootstrap Bundle con Popper JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/categorias.js"></script>
 </body>
 </html>
