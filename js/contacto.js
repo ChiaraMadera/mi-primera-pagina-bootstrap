@@ -72,19 +72,21 @@ const validarInicio = () => {
   const nombre = document.querySelector("#nombre");
   const apellido = document.querySelector("#apellido");
   const email = document.querySelector("#email");
+  const mensaje = document.querySelector("#mensaje");
 
-  if (!form || !nombre || !apellido || !email) {
+  if (!form || !nombre || !apellido || !email || !mensaje) {
     return;
   }
 
   const campos = [
-    { input: nombre, tipo: "texto", minLen:3 },
-    { input: apellido, tipo: "texto", minLen:3 },
-    { input: email, tipo: "email" }
+    { input: nombre, tipo: "texto", minLen: 3 },
+    { input: apellido, tipo: "texto", minLen: 3 },
+    { input: email, tipo: "email" },
+    { input: mensaje, tipo: "mensaje", minLen: 10 }
   ];
 
   campos.forEach(({ input, tipo, minLen}) => {
-    input.addEventListener("cambio", () => {
+    input.addEventListener("change", () => {
       validarCampo(input, tipo, minLen);
     });
 

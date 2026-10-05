@@ -49,9 +49,9 @@ A continuación se detalla toda la información de los productos disponibles en 
 
 | Producto | Imagen | Categoría | Precio | Descripción | Dónde se muestra |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Cuaderno bordó tapa dura** | `img/Cuaderno tapa dura.jpeg` | Libretas | $10.500 | Cuaderno/agenda en tono bordó elegante con encuadernación cosida y hojas lisas de alto gramaje (80 g/m²) que no traspasan la tinta de plumas ni resaltadores. | Diapositiva 1 del carrusel de destacados (`index.html`) |
-| **Cuaderno estilo Midori** | `img/midori.jpeg` | Libretas | $12.800 | Libreta de viaje artesanal con cubierta de cuero/eco-cuero resistente, cierre elástico y sistema de repuestos recargables. Diseñada para acompañar viajes y proyectos a largo plazo. | Diapositiva 2 del carrusel de destacados (`index.html`) |
-| **Cuaderno pastel con elástico** | `img/cuaderno.jpg` | Libretas | $9.500 | Cuaderno de tapa dura lisa en tonalidad pastel, con cinta elástica de seguridad y señalador de tela. Ideal para notas diarias, clases y bitácora. | Portada / Hero principal (`index.html`) |
+| **Cuaderno amarillo** | `img/cuaderno.jpg` | Libretas | $10.500 | Cuaderno de tapa dura, ideal para apuntes y notas de todos los días. | Categorías (`categorias.html`) |
+| **Libreta Midori** | `img/midori 2.jpeg` | Libretas | $12.800 | Libreta de viaje artesanal con cubierta resistente, cierre elástico y sistema de repuestos recargables. | Categorías (`categorias.html`) |
+| **Cuaderno de tapa dura** | `img/Cuaderno tapa dura.jpeg` | Libretas | $9.500 | Cuaderno de tapa dura para escribir, tomar apuntes y organizar ideas. | Categorías (`categorias.html`) |
 
 ---
 
@@ -61,7 +61,7 @@ A continuación se detalla toda la información de los productos disponibles en 
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Resaltadores pastel** | `img/Resaltadores 2.jpeg` | Escritura | $6.400 | Set de resaltadores en tonos amarillo, menta, rosa y durazno para destacar apuntes. | Diapositiva 1 del carrusel de destacados (`index.html`) |
 | **Bolígrafos de tinta gel 0.5mm** | `img/Bolígrafos de tinta gel 0,5mm.jpeg` | Escritura | $5.900 | Set de bolígrafos de punta fina 0.5 mm con tinta gel de flujo continuo y secado ultra rápido, diseñados para una escritura ergonómica, suave y limpia. | Diapositiva 2 del carrusel de destacados (`index.html`) |
-| **Marcadores punta pincel (Brush Pens)** | `img/marcadores.jpeg` | Escritura | $7.900 | Marcadores flexibles con punta tipo pincel para caligrafía moderna, lettering, bocetos y detalles artísticos. | Recursos del proyecto (`img/`) |
+| **Marcadores punta pincel (Brush Pens)** | `img/marcadores.jpeg` | Escritura | $7.900 | Marcadores flexibles con punta tipo pincel para caligrafía moderna, lettering, bocetos y detalles artísticos. | Categorías (`categorias.html`), con detalle en modal |
 
 ---
 
