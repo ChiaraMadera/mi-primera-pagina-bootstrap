@@ -97,6 +97,24 @@ A continuación se detalla toda la información de los productos disponibles en 
 
 ---
 
+## ✅ Formulario de contacto y validaciones
+
+La página de contacto incluye un formulario con validación del lado del cliente para garantizar que los datos ingresados sean correctos antes del envío.
+
+### Validaciones implementadas
+- Nombre: obligatorio y solo letras.
+- Apellido: obligatorio y solo letras.
+- Email: obligatorio y formato válido.
+- Mensaje de éxito al completar correctamente el formulario.
+
+El script que controla estas validaciones se encuentra en `js/contacto.js`.
+
+## ▶️ Cómo ejecutar el proyecto
+
+1. Abrir la carpeta del proyecto en el navegador.
+2. Cargar `index.html` o navegar desde `contacto.html`.
+3. Si se trabaja localmente con un servidor estático, se puede utilizar Live Server o cualquier servidor local simple.
+
 ## 👥 Contexto del Proyecto
 - **Curso:** Desarrollo Web Full Stack.
 - **Institución:** Fundación CILSA.
